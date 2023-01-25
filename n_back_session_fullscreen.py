@@ -281,7 +281,7 @@ class N_Back(object):
             t: fixation time in seconds
         """
         self.screen.fill(self.game.board_color)
-        fix_img = pygame.image.load("img/fixation.jpg")
+        fix_img = pygame.image.load("img/fixation.png")
         fix_img = pygame.transform.scale(fix_img, (self.game.monitor_size[1], self.game.monitor_size[1]))
         fix_rect = fix_img.get_rect()
         fix_rect.center = ((self.game.monitor_size[0] / 2), self.game.monitor_size[1] / 2)
@@ -348,7 +348,7 @@ class Session(object):
             n_back.run()
             self.filename.write("\n")
             if i <= len(self.sequence):
-                if (n_back.results["rate"] < 50) and (self.sequence[i] != 0):
+                if (n_back.results["rate"] <= 75) and (self.sequence[i] != 0):
                     self.sequence[i+1] = self.sequence[i] - 1
                 
                 elif (n_back.results["rate"] > 75) and (self.sequence[i] != 2):

@@ -281,7 +281,7 @@ class N_Back(object):
             t: fixation time in seconds
         """
         self.screen.fill(self.game.board_color)
-        fix_img = pygame.image.load("img/fixation.jpg")
+        fix_img = pygame.image.load("img/fixation.png")
         fix_img = pygame.transform.scale(fix_img, (self.game.monitor_size[1], self.game.monitor_size[1]))
         fix_rect = fix_img.get_rect()
         fix_rect.center = ((self.game.monitor_size[0] / 2), self.game.monitor_size[1] / 2)

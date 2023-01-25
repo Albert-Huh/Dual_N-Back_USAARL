@@ -11,6 +11,7 @@ def askSubjectInfo():
     return subject_num, session_num, age, gender
 
 def main():
+    info_flag = False
     while info_flag == False:
         is_int = 0
         subject_num, session_num, age, gender = askSubjectInfo()
