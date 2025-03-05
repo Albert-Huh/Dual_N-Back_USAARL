@@ -114,7 +114,7 @@ For a shorter, more configurable training experience:
 2. **Enter difficulty** (0 for Low, 1 for Medium, 2 for High) and subject info.
 3. This script primarily `references n_back_training.py` for logic and also outputs logs to `reports/` and `results/`.
 
-### Generating Auditory Feedback
+### Generate Auditory Feedback
 
 If you do not see good.mp3 and bad.mp3 in the repository root, run:
    ```bash
